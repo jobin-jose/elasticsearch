@@ -148,7 +148,7 @@ public class ReproduceInfoPrinter extends RunListener {
             appendProperties("tests.assertion.disabled", "tests.security.manager", "tests.nightly", "tests.jvms", 
                              "tests.client.ratio", "tests.heap.size", "tests.bwc", "tests.bwc.version");
             if (System.getProperty("tests.jvm.argline") != null && !System.getProperty("tests.jvm.argline").isEmpty()) {
-                appendOpt("tests.jvm.argline", "\"" + System.getProperty("tests.jvm.argline") + "\"");
+                appendOpt("tests.jvm.argline",  System.getProperty("tests.jvm.argline") );
             }
             appendOpt("tests.locale", Locale.getDefault().toString());
             appendOpt("tests.timezone", TimeZone.getDefault().getID());
